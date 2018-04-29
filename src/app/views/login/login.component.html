@@ -1,44 +1,35 @@
 <article class="background login-page">
-<div ng-controller="DemoCtrl" ng-app="MyApp" layout="row" layout-align="center center">
-  <div class="wrapper">
-    <img class="img-responsive primary-logo" src="assets/images/logoprimary.png">
-  </div>
-    <form class="login-form login">
-      <div class="login-fields">
-        <mat-form-field class="example-full-width " >
-          <input [(ngModel)]="email" name="email" matInput placeholder="Email" [formControl]="emailFormControl"  
-          [errorStateMatcher]="matcher" class="primary-input"
-                >
-          <mat-hint hidden>Errors appear instantly!</mat-hint>
-          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-          </mat-error>
-          <mat-error *ngIf="emailFormControl.hasError('required')">
-            Email is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
+  <div ng-controller="DemoCtrl" ng-app="MyApp" layout="row" layout-align="center center">
 
-        <mat-form-field class="example-full-width">
-            <input [(ngModel)]="password" name="password" matInput placeholder="Password" class="primary-input"
-                   >
+      <form class="login-form login">
+          <h4 class="primary-writing margin-bottom">Sign in</h4>
+        <div class="login-fields">
+          <mat-form-field class="example-full-width " >
+            <input [(ngModel)]="email" name="email" matInput placeholder="Email" [formControl]="emailFormControl"  
+            [errorStateMatcher]="matcher" class="primary-input">
             <mat-hint hidden>Errors appear instantly!</mat-hint>
-            <mat-error >
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
               Please enter a valid email address
             </mat-error>
-            <mat-error >
+            <mat-error *ngIf="emailFormControl.hasError('required')">
               Email is <strong>required</strong>
             </mat-error>
           </mat-form-field>
-     
-        </div>
-       
-
-        <div class="group-block-vertical">
-        <button (click)="login()" mat-raised-button class="mat-raised-button primary-background primary-writing margin-small">Login</button>
-        <a routerLink="/register" class="margin-small primary-writing">Don't have an account yet? Click to register!</a>
-      </div>
+          <mat-form-field class="example-full-width">
+              <input [(ngModel)]="password" name="password" matInput placeholder="Password" class="primary-input">
+              <mat-hint hidden>Errors appear instantly!</mat-hint>
+              <mat-error >
+                Please enter a valid email address
+              </mat-error>
+              <mat-error >
+                Email is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="group-block-vertical margin-top">
+            <button (click)="login()" mat-raised-button class="mat-raised-button primary-background primary-writing margin-small">Login</button>
+            <a routerLink="/register" class="margin-small primary-writing">Don't have an account yet? Click to register!</a>
+          </div>
       </form>
-
-
 </div>
 </article>

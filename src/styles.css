@@ -1,14 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-
+app-root {
+    height: 100%;
+    margin: 0;
+}
 
 html,body {
+    background-color: rgba(188, 27,43,0.2);
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    margin:0;
+    padding:0;
+    min-height: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+
+    background-color: transparent !important; 
+    transition: background-color 5000s ease-in-out 0s
+  
+}
+
+/* html,body {
     margin:0;
     padding:0;
     min-height: 100%;
     height: 100%;
-}
+} */
 
 .primary{
     color: #2d3e51;
@@ -47,10 +75,14 @@ html,body {
 }
 
 .primary-logo {
-    width: 450px;
-    height: 50px;
-    margin-top: 80px;
-    
+    width: 300px;
+    height: 40px;  
+}
+
+/*form*/
+.content{
+    width: 100%;
+    display: inline-flex;
 }
 
 /*layout*/
@@ -60,4 +92,12 @@ html,body {
 
 .margin-small {
     margin: 10px;
+}
+
+.margin-top {
+    margin-top: 20px;   
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
 }
