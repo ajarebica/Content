@@ -7,12 +7,13 @@ app-root {
 }
 
 html,body {
-    background-color: rgba(188, 27,43,0.2);
+    background-color: whitesmoke;
     height: 100%;
     -webkit-font-smoothing: antialiased;
     margin:0;
     padding:0;
     min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
 input:-webkit-autofill,
@@ -44,6 +45,11 @@ select:-webkit-autofill:focus {
 
 .primary-writing {
     color: #2d3e51 !important;
+    font-weight: 600 !important;
+}
+
+.secondary-writing {
+    color: #1bbc9c !important;
     font-weight: 600;
 }
 
